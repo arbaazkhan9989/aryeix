@@ -1,0 +1,148 @@
+
+.notosans-semi-bold-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: 16;
+  font-weight: 600;
+  font-style: normal;
+}
+.notosans-semi-bold-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-l);
+  font-weight: 600;
+  font-style: normal;
+}
+.notosans-bold-white-32px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  font-style: normal;
+}
+.notosans-semi-bold-white-8px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-l);
+  font-weight: 600;
+  font-style: normal;
+}
+.notosans-normal-white-6px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  font-style: normal;
+}
+.notosans-bold-white-28px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: 28;
+  font-weight: 700;
+  font-style: normal;
+}
+.notosans-bold-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-m2);
+  font-weight: 700;
+  font-style: normal;
+}
+.notosans-semi-bold-white-7px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  font-style: normal;
+}
+.notosans-bold-white-18px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xl2);
+  font-weight: 700;
+  font-style: normal;
+}
+.notosans-normal-white-7px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
+}
+.notosans-medium-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-m2);
+  font-weight: 500;
+  font-style: normal;
+}
+.notosans-medium-white-10px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xxl);
+  font-weight: 500;
+  font-style: normal;
+}
+.notosans-bold-white-32px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: 32;
+  font-weight: 700;
+  font-style: normal;
+}
+.notosans-semi-bold-white-12px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xxl);
+  font-weight: 600;
+  font-style: normal;
+}
+.notosans-normal-white-10px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  font-style: normal;
+}
+.notosans-semi-bold-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-m2);
+  font-weight: 600;
+  font-style: normal;
+}
+.notosans-semi-bold-white-6px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  font-style: normal;
+}
+.notosans-bold-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: 16;
+  font-weight: 700;
+  font-style: normal;
+}
+.notosans-bold-white-24px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: 24;
+  font-weight: 700;
+  font-style: normal;
+}
+.notosans-semi-bold-white-9px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-s2);
+  font-weight: 600;
+  font-style: normal;
+}
+.notosans-semi-bold-white-10px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xxl);
+  font-weight: 600;
+  font-style: normal;
+}
