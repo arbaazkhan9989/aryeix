@@ -476,7 +476,7 @@ opacity: 1;transform: scale(0.6);
   height: 16px;
   left: 155px;
   object-fit: cover;
-  position: absolute;
+  position: fixed;
   top: 20px;
   width: 16px;
 opacity: 0;transform: translate(-25px, 0);
@@ -488,7 +488,7 @@ opacity: 0;transform: translate(-25px, 0);
   height: 18px;
   margin-top: 27px;
   object-fit: cover;
-  position: relative;
+  position: fixed;
   width: 18px;
 opacity: 0;transform: translate(-25px, 0);
 }
@@ -501,7 +501,7 @@ opacity: 0;transform: translate(-25px, 0);
   margin-left: 0.74px;
   margin-top: 27px;
   object-fit: cover;
-  position: relative;
+  position: fixed;
   width: 18px;
 opacity: 0;transform: translate(-25px, 0);
 }
@@ -511,20 +511,23 @@ opacity: 0;transform: translate(-25px, 0);
   height: 11px;
   left: 155px;
   object-fit: cover;
-  position: absolute;
+  position: fixed;
   top: 64px;
   width: 16px;
 opacity: 0;transform: translate(-25px, 0);
 }
 .web-1920-5 .icon-metro-facebook-stzou5 {
   background-color: transparent;
-  display: block;
+	display: block;
+  cursor: pointer;
   flex-shrink: 1;
   height: 16px;
   margin-left: 1.03px;
   margin-top: 27px;
   object-fit: cover;
-  position: relative;
+	pointer-events: auto;
+  position: fixed;
+	transition: all 0.3s ease;
   width: 16px;
 opacity: 0;transform: translate(-25px, 0);
 }
@@ -537,7 +540,7 @@ opacity: 0;transform: translate(-25px, 0);
   margin-top: 288px;
   object-fit: cover;
   pointer-events: auto;
-  position: relative;
+  position: fixed;
   transition: all 0.3s ease;
   width: 16px;
 }
