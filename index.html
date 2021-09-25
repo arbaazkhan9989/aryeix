@@ -1,29 +1,475 @@
 <!DOCTYPE html>
-<html lang=en>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+25/09/2021 10:25:19 -->
+
+<html>
 <head>
-    <meta charset=utf-8>
-    <meta http-equiv=X-UA-Compatible content="IE=edge">
-    <meta name=viewport content="width=device-width,initial-scale=1,minimal-ui,maximum-scale=1">
-    <meta name=apple-mobile-web-app-capable content=yes>
-    <meta name=apple-mobile-web-app-title content="Anima Prototype">
-    <link rel=icon href=/favicon.png>
-    <link rel=apple-touch-icon href=/apple-touch.png>
-    <title>Anima</title>
-    <link href=/static/css/app.3c343a2a.css rel=preload as=style>
-    <link href=/static/css/chunk-vendors.726fb29f.css rel=preload as=style>
-    <link href=/static/js/app.6d5efa86.js rel=preload as=script>
-    <link href=/static/js/chunk-vendors.9d41a3f3.js rel=preload as=script>
-    <link href=/static/css/chunk-vendors.726fb29f.css rel=stylesheet>
-    <link href=/static/css/app.3c343a2a.css rel=stylesheet>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
+    <meta name="og:type" content="website">
+    <meta name="twitter:card" content="photo">
+    <script id="anima-hotspots-script" src="hotspots.js"></script>
+    <script id="anima-overrides-script" src="overrides.js"></script>
+    <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
+    <style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+    @import url("https://fonts.googleapis.com/css?family=Raleway:400,700,600,800,100|Rubik:500");
+    @font-face {
+        font-family: "ArialRounded MT Bold-Regular";
+        font-style: normal;
+        font-weight: 700;
+        src: url('https://anima-uploads.s3.amazonaws.com/projects/60cbff67b0c640d36ec2a03a/fonts/varelaround-regular.ttf') format("truetype");
+    }
+
+    @font-face {
+        font-family: "ArialNarrow-Bold";
+        font-style: normal;
+        font-weight: 700;
+        src: url('https://anima-uploads.s3.amazonaws.com/5c49b36ba383dc000a98ff25/Arial Narrow Bold.ttf') format("truetype");
+    }
+
+    @font-face {
+        font-family: "DINCondensed-Bold";
+        font-style: normal;
+        font-weight: 700;
+        src: url('https://anima-uploads.s3.amazonaws.com/5c21bf6c6c6be400098c453e/DIN Condensed Bold.ttf') format("truetype");
+    }
+
+    @font-face {
+        font-family: "CodeLight-Regular";
+        font-style: normal;
+        font-weight: 300;
+        src: url('https://anima-uploads.s3.amazonaws.com/projects/614ec3808a67df132bf2d06f/fonts/code-light.otf') format("opentype");
+    }
+
+    @font-face {
+        font-family: "GeezaPro-Regular";
+        font-style: normal;
+        font-weight: 400;
+        src: url('https://anima-uploads.s3.amazonaws.com/5e313f6eb26e439c7dbe42e0/Geeza Pro.ttf') format("truetype");
+    }
+
+    .screen textarea:focus, .screen input:focus {
+        outline: none;
+    }
+
+    .screen * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+    }
+
+    .screen div {
+        -webkit-text-size-adjust: none;
+    }
+
+    .component-wrapper a {
+        display: contents;
+        pointer-events: auto;
+        text-decoration: none;
+    }
+
+    .component-wrapper * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        pointer-events: none;
+    }
+
+    .component-wrapper a *, .component-wrapper input, .component-wrapper video, .component-wrapper iframe {
+        pointer-events: auto;
+    }
+
+    .component-wrapper.not-ready, .component-wrapper.not-ready * {
+        visibility: hidden !important;
+    }
+
+    .screen a {
+        display: contents;
+        text-decoration: none;
+    }
+
+    .full-width-a {
+        width: 100%;
+    }
+
+    .full-height-a {
+        height: 100%;
+    }
+
+    .container-center-vertical {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .container-center-vertical > * {
+        flex-shrink: 0;
+        pointer-events: auto;
+    }
+
+    .container-center-horizontal {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        pointer-events: none;
+        width: 100%;
+    }
+
+    .container-center-horizontal > * {
+        flex-shrink: 0;
+        pointer-events: auto;
+    }
+
+    .auto-animated div {
+        --z-index: -1;
+        opacity: 0;
+        position: absolute;
+    }
+
+    .auto-animated .container-center-vertical, .auto-animated .container-center-horizontal {
+        opacity: 1;
+    }
+
+    .overlay {
+        display: none;
+        height: 100%;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .overlay.animate-appear {
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+        display: block;
+        opacity: 0;
+    }
+
+    .overlay.animate-disappear {
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+        display: block;
+        opacity: 1;
+    }
+
+    @keyframes reveal {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .animate-nodelay {
+        animation-delay: 0s;
+    }
+
+    .align-self-flex-start {
+        align-self: flex-start;
+    }
+
+    .align-self-flex-end {
+        align-self: flex-end;
+    }
+
+    .align-self-flex-center {
+        align-self: flex-center;
+    }
+
+    .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .listeners-active, .listeners-active * {
+        pointer-events: auto;
+    }
+
+    .hidden, .hidden * {
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    .smart-layers-pointers, .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+    }
+
+    .listeners-active-click, .listeners-active-click * {
+        cursor: pointer;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    :root {
+        --black: #000000;
+        --dove-gray: #707070;
+        --seashell: #f1f1f1;
+        --sonic-silver: #747474;
+        --white: #ffffff;
+        --font-size-l: 18px;
+        --font-size-m: 12px;
+        --font-size-s: 9px;
+        --font-size-xl: 90px;
+        --font-family-arialhebrew_scholar-bold: "ArialHebrew Scholar-Bold", Helvetica;
+        --font-family-arialhebrew_scholar-regular: "ArialHebrew Scholar-Regular", Helvetica;
+        --font-family-arialrounded_mt_bold-regular: "ArialRounded MT Bold-Regular", Helvetica;
+        --font-family-raleway: "Raleway", Helvetica;
+    }
+
+    .arialhebrewscholar-regular-normal-black-9px {
+        color: var(--black);
+        font-family: var(--font-family-arialhebrew_scholar-regular);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .arialhebrewscholar-regular-normal-black-12px {
+        color: var(--black);
+        font-family: var(--font-family-arialhebrew_scholar-regular);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .raleway-thin-black-90px {
+        color: var(--black);
+        font-family: var(--font-family-raleway);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 100;
+    }
+
+    .raleway-semi-bold-black-18px {
+        color: var(--black);
+        font-family: var(--font-family-raleway);
+        font-size: var(--font-size-l);
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    .arialhebrewscholar-bold-seashell-9px {
+        color: var(--seashell);
+        font-family: var(--font-family-arialhebrew_scholar-bold);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 700;
+    }/* screen - ipad-pro-11in-9 */
+    .ipad-pro-11in-9 {
+        background-color: var(--white);
+        cursor: pointer;
+        height: 1194px;
+        overflow: hidden;
+        overflow-x: hidden;
+        position: relative;
+        width: 834px;
+    }
+
+    .ipad-pro-11in-9 .rectangle-1-C61RwL {
+        background-color: var(--seashell);
+        height: 1194px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 834px;
+    }
+
+    .ipad-pro-11in-9 .rectangle-154-C61RwL {
+        background-color: transparent;
+        height: 90px;
+        left: 372px;
+        overflow: hidden;
+        position: absolute;
+        top: 552px;
+        width: 90px;
+    }
+
+    .ipad-pro-11in-9 .rectangle-155-C61RwL {
+        background-color: var(--black);
+        height: 90px;
+        left: 372px;
+        opacity: 0.06;
+        position: absolute;
+        top: 552px;
+        width: 90px;
+    }/* screen - iphone-12-pro-max-10 */
+
+    .iphone-12-pro-max-10 {
+        background-color: var(--white);
+        cursor: pointer;
+        height: 926px;
+        overflow: hidden;
+        overflow-x: hidden;
+        position: relative;
+        width: 428px;
+    }
+
+    .iphone-12-pro-max-10 .rectangle-2-C61RwL {
+        background-color: var(--seashell);
+        height: 926px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 428px;
+    }
+
+    .iphone-12-pro-max-10 .rectangle-154-C61RwL {
+        background-color: transparent;
+        height: 70px;
+        left: 179px;
+        overflow: hidden;
+        position: absolute;
+        top: 428px;
+        width: 70px;
+    }
+
+    .iphone-12-pro-max-10 .rectangle-155-C61RwL {
+        background-color: var(--black);
+        height: 70px;
+        left: 179px;
+        opacity: 0.06;
+        position: absolute;
+        top: 428px;
+        width: 70px;
+    }/* screen - web-1280-1 */
+
+    .web-1280-1 {
+        background-color: var(--white);
+        cursor: pointer;
+        height: 800px;
+        overflow: hidden;
+        overflow-x: hidden;
+        position: relative;
+        width: 1280px;
+    }
+
+    .web-1280-1 .rectangle-0-C61RwL {
+        background-color: var(--seashell);
+        height: 800px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 1280px;
+    }
+
+    .web-1280-1 .rectangle-154-C61RwL {
+        background-color: transparent;
+        height: 90px;
+        left: 595px;
+        overflow: hidden;
+        position: absolute;
+        top: 355px;
+        width: 90px;
+    }
+
+    .web-1280-1 .rectangle-155-C61RwL {
+        background-color: var(--black);
+        height: 90px;
+        left: 595px;
+        opacity: 0.06;
+        position: absolute;
+        top: 355px;
+        width: 90px;
+    }
+
+    @media screen and (max-width: 833px) {
+        .screen.web-1280-1 {
+            display: none;
+        }
+
+        .screen.ipad-pro-11in-9 {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 834px) and(max-width: 1279px) {
+        .screen.web-1280-1 {
+            display: none;
+        }
+
+        .screen.iphone-12-pro-max-10 {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        .screen.ipad-pro-11in-9 {
+            display: none;
+        }
+
+        .screen.iphone-12-pro-max-10 {
+            display: none;
+        }
+    }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated.">
 </head>
-<body>
-    <noscript>
-        <strong>We're sorry but Anima client doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-        <img height=1 width=1 style="display: none" src="https://www.facebook.com/tr?id=1619126221749999&ev=PageView&noscript=1">
-        <img height=1 width=1 style="display: none" src="https://q.quora.com/_/ad/61e44f95f2bd43958d9a12b669051d46/pixel?tag=ViewContent&noscript=1">
-    </noscript>
-    <div id=app></div>
-    <script src=/static/js/chunk-vendors.9d41a3f3.js></script>
-    <script src=/static/js/app.6d5efa86.js></script>
+<body style="margin: 0;background: #ffffff;">
+    <input type="hidden" id="anPageName" name="page" value="web-1280-1">
+    <div class="container-center-horizontal">
+        <div class="web-1280-1 screen " data-id="88acedfe-47f5-4047-9b0a-bd454ceb31e4">
+            <div class="rectangle-0-C61RwL" data-id="30c99359-72dc-47d5-bbbc-2baf51970c7c"></div>
+            <div class="rectangle-154-C61RwL" data-id="6f0f9c2c-6ee6-4ffd-ace7-eb631ec51f23">
+                <img width="100%" height="100%" src="" anima-src="https://github.com/arbaazkhan9989/gif/blob/main/ezgif.com-video-to-gif.gif?raw=true">
+            </div>
+            <div class="rectangle-155-C61RwL" data-id="2fb43c88-1dd1-4b75-931d-a6e5723b1edb"></div>
+        </div>
+    </div>
+    <script>
+    setTimeout(function() {
+        window.open('web-1280-2', '_self');
+    }, 3000)
+    </script>
+    <div class="container-center-horizontal">
+        <div class="ipad-pro-11in-9 screen " data-id="c3afa2f3-f6e8-4879-9831-1b6f3cc232c3">
+            <div class="rectangle-1-C61RwL" data-id="399daaeb-a8f5-40dd-86d3-98f2adcc74fd"></div>
+            <div class="rectangle-154-C61RwL" data-id="5d2f825e-0d4c-4700-b35c-bdbd4c7b9cb6">
+                <img width="100%" height="100%" src="" anima-src="https://github.com/arbaazkhan9989/gif/blob/main/ezgif.com-video-to-gif.gif?raw=true">
+            </div>
+            <div class="rectangle-155-C61RwL" data-id="39cbbefa-f051-4124-8afe-28785248c5ac"></div>
+        </div>
+    </div>
+    <script>
+    setTimeout(function() {
+        window.open('web-1280-2', '_self');
+    }, 3000)
+    </script>
+    <div class="container-center-horizontal">
+        <div class="iphone-12-pro-max-10 screen " data-id="d6c3bc2c-1619-4a3f-a5f5-3bb80681eced">
+            <div class="rectangle-2-C61RwL" data-id="9c4c4e61-5ae1-42cd-8c3b-74878d6a96b3"></div>
+            <div class="rectangle-154-C61RwL" data-id="4a721826-3631-49db-9a31-433b2b6d31ed">
+                <img width="100%" height="100%" src="" anima-src="https://github.com/arbaazkhan9989/gif/blob/main/ezgif.com-video-to-gif.gif?raw=true">
+            </div>
+            <div class="rectangle-155-C61RwL" data-id="2b7d6345-c3b7-4f9a-994e-eb94f5d01a35"></div>
+        </div>
+    </div>
+    <script>
+    setTimeout(function() {
+        window.open('web-1280-2', '_self');
+    }, 3000)
+    </script>
+    <script src="launchpad-js/launchpad-banner.js" async></script>
+    <script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script>
 </body>
 </html>
+
